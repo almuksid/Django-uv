@@ -11,3 +11,19 @@ def json_view(request):
         'status': 'success'
     }
     return JsonResponse(data)
+
+def dhaka(request):
+    weather = {
+        'location' : 'Dhaka',
+        'temperature': '18 degree', 
+        'conditon': 'Cold'
+    }
+    return JsonResponse(weather)
+
+def rajshahi(request):
+    weather = {
+        'location' : 'rajshahi',
+        'temperature' : '12 degree',
+        'condition' : 'Super cold'
+    }
+    return JsonResponse(weather)

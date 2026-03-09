@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'day2.apps.Day2Config',
     'day1.apps.Day1Config',
 
     'django.contrib.admin',
@@ -63,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'day2.context_processore.global_data',
             ],
         },
     },

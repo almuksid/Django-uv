@@ -1,3 +1,4 @@
+from django.urls import path, include
 """
 URL configuration for Django project.
 
@@ -18,7 +19,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('day2/', include('day2.urls')),
     path('day1/', include('day1.urls')),
+    path('admin/', admin.site.urls),
 ]
 

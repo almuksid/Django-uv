@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhaka Weather</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    <h2>{{ title }}</h2>
+    <p>Location: {{ weather.location }}</p>
+    <p>Temperature: {{ weather.temperature }}°C</p>
+    <p>Condition: 
+        {% if weather.temperature > 30 %}
+            Hot
+        {% elif weather.temperature > 20 %}
+            Moderate
+        {% elif weather.temperature > 10 %}
+            Cool
+        {% else %}
+            super cold
+        {% endif %}
+    </p>
+    <ul>
+        {% for item in forcast %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
