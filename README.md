@@ -1,4 +1,8 @@
-# Day1. 
+# Day1. What is uv and what is django & elplore django project and app
+uv is alternatice for pip 
+- https://docs.astral.sh/uv/getting-started/installation/
+*open powershell then run this cmd*
+- powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ## 1. How to setup django using uv 
 - uv init
 - uv venv
@@ -13,7 +17,7 @@
 
 - uv run python scripts/startappx.py myapp1
 ---
-# Day2. 
+# Day2. using variable, if else, loop, context & a Project
 ## 1. Context Processore
 - Create a  file name context_processore.py, then 
 ```django
@@ -73,5 +77,28 @@ def dhaka(request):
 ```
 
 ## 03. Complete a project 
-
 ---
+
+# Day3. Static Assets load & alpinejs 
+## 01. 
+contact.html
+```html
+<form action = "{% url 'day3:submission_handler' %}" method="post">
+{% csrf_token %}  
+```
+views.py
+```
+from django.http import JsonResponse
+
+def contact(request):
+    return render(request, 'day3/contact.html')
+
+def submission_handler(request):
+    data  = {
+        'first_name': request.POST.get('fname'),
+        'last_name': request.POST.get('lname'),   
+        'email': request.POST.get('email'),
+        'message': request.POST.get('message'),
+    }
+    return JsonResponse(data)
+```

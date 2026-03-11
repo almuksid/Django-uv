@@ -1,0 +1,14 @@
+{% extends "day2project/common/base.html" %}
+{% load static %}
+{% block title %}Messages{% endblock %}
+
+{% block content %}
+
+<h2>> Your message has been sent successfully! </h2>
+<script>
+    setTimeout(() => {
+        location.href = "/day3/contact/"
+    }, 2000);
+</script>
+
+{% endblock %}

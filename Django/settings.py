@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'day3.apps.Day3Config',
     'day2project.apps.Day2ProjectConfig',
     'day2.apps.Day2Config',
     'day1.apps.Day1Config',
