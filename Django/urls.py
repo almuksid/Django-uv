@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('day4/', include('day4.urls')),
     path('day3/', include('day3.urls')),
     path('day2project/', include('day2project.urls')),
     path('day2/', include('day2.urls')),

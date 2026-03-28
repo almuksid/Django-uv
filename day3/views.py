@@ -18,4 +18,4 @@ def submission_handler(request):
     # messages.success(request, 'Your form has been submitted successfully!')
     # return redirect('day3:contact')
     
-    return render(request, 'day3/messages.html')
+    return render(request, 'day3/messages.html') 

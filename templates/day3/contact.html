@@ -92,6 +92,15 @@
                 </div>
               </div>
 
+              <!-- Using hard-coded success message -->
+              <!-- <div>
+                {% if success %}
+                <p>Messages send successfully!</p>
+                {%endif %}
+              </div> -->
+
+              
+
               <form action = "{% url 'day3:submission_handler' %}" method="post">
                 {% csrf_token %}    
                 <div class="row">

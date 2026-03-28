@@ -1,0 +1,18 @@
+{% extends "day2project/common/base.html" %}
+{% load static %}
+{% block title %}Number{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div style="margin: 20px 0px;">
+        Number: {{n}}
+        {% if isEven %}
+            is even
+        {% else %}
+            is odd
+        {% endif %}
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+{% endblock %}
